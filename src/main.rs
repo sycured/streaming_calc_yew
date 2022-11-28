@@ -7,7 +7,7 @@ use subw::Subw;
 mod bws;
 mod subw;
 
-#[derive(Routable, PartialEq, Clone, Debug)]
+#[derive(Routable, PartialEq, Eq, Clone, Debug)]
 pub enum Route {
     #[at("/bws")]
     Bws,
@@ -27,6 +27,7 @@ fn app() -> Html {
 }
 
 //noinspection RsTypeCheck
+#[allow(clippy::needless_pass_by_value)]
 fn switch(routes: Route) -> Html {
     match routes {
         Route::Bws => {

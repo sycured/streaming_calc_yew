@@ -52,10 +52,10 @@ pub fn server_usage_bw() -> Html {
 
     let calculate = {
         let state = state.clone();
-        let nblisteners = nblisteners.clone();
-        let nbdays = nbdays.clone();
-        let nbhours = nbhours.clone();
-        let bitrate = bitrate.clone();
+        let nblisteners = nblisteners;
+        let nbdays = nbdays;
+        let nbhours = nbhours;
+        let bitrate = bitrate;
         Callback::from(move |_| {
             let nblisteners = *nblisteners;
             let bitrate = *bitrate;

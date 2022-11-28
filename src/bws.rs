@@ -30,8 +30,8 @@ pub fn bwserver() -> Html {
 
     let calculate = {
         let state = state.clone();
-        let nblisteners = nblisteners.clone();
-        let bitrate = bitrate.clone();
+        let nblisteners = nblisteners;
+        let bitrate = bitrate;
         Callback::from(move |_| {
             let nblisteners = *nblisteners;
             let bitrate = *bitrate;
