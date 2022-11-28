@@ -3,7 +3,7 @@ use web_sys::{Event, HtmlInputElement};
 use yew::{Callback, events::InputEvent, function_component, html, prelude::*};
 
 #[function_component(Subw)]
-pub fn server_usage_bw() -> html {
+pub fn server_usage_bw() -> Html {
     let nblisteners = use_state_eq(|| 0.0);
     let bitrate = use_state_eq(|| 0.0);
     let nbdays = use_state_eq(|| 0.0);

@@ -20,15 +20,15 @@ fn app() -> Html {
     html!(
         <BrowserRouter>
             <main>
-                <Switch<Route> render={Switch::render(switch)} />
+                <Switch<Route> render={switch} />
             </main>
         </BrowserRouter>
     )
 }
 
 //noinspection RsTypeCheck
-fn switch(routes: &Route) -> Html {
-    match routes.clone() {
+fn switch(routes: Route) -> Html {
+    match routes {
         Route::Bws => {
             html! { <Bws /> }
         }
@@ -39,5 +39,5 @@ fn switch(routes: &Route) -> Html {
 }
 
 fn main() {
-    yew::start_app::<App>();
+    yew::Renderer::<App>::new().render();
 }
