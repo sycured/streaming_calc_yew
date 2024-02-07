@@ -14,7 +14,7 @@ opt-level = 's'
 lto = true
 
 [dependencies]
-wasm-bindgen = "0.2.90"
+wasm-bindgen = "0.2.91"
 web-sys = "0.3.67"
 yew = { version = "0.21.0", features = [ "csr" ] }
 yew-router = "0.18.0"
